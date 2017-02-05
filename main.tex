@@ -1,0 +1,292 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.3 (29/10/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same
+% directory as this .tex file. These files provide the resume style and themes
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{paratype}
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Georgy} % Your first name
+\familyname{Lukyanov} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{44 Pushkinskaya st.}{344082 Rostov-on-Don, Russia}
+\mobile{+7(908) 506 9512}
+\email{georgiy.lukjanov@gmail.com}
+\homepage{geo2a.github.io}{geo2a.github.io} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+% \extrainfo{additional information}
+% \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+% \quote{"A witty and playful quotation" - John Smith}
+
+% Colored hyperlinks
+\newcommand\Colorhref[3][cyan]{\href{#2}{\small\color{#1}#3}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% %----------------------------------------------------------------------------------------
+% %	COVER LETTER
+% %----------------------------------------------------------------------------------------
+
+% % To remove the cover letter, comment out this entire block
+
+% \clearpage
+
+% \recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+% \date{\today} % Letter date
+% \opening{Dear Sir or Madam,} % Opening greeting
+% \closing{Sincerely yours,} % Closing phrase
+% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+% \makelettertitle % Print letter title
+
+% \lipsum[1-2] % Dummy text
+% \lipsum[4] % Dummy text
+
+% \makeletterclosing % Print letter signature
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	CURRICULUM VITAE
+%----------------------------------------------------------------------------------------
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2015--2017 (in-progress)}{M. Sc. in Computer Science}{Southern Federal University, I. I. Vorovich Institute of Mathematics, Mechanics and Computer Science}{Rostov-on-Don, Russia}{}{}  % Arguments not required can be left empty
+\cventry{February --\\June 2016}{Eramus+ exchange program}{Vilnius University, Faculty of Mathematics and Informatics, Faculty of Philology}{Vilnius, Lithuania}{}{}
+
+\cventry{2011--2015}{B. Sc. in Applied Mathematics and Computer Science}{Southern Federal University, I. I. Vorovich Institute of Mathematics, Mechanics and Computer Science}{Rostov-on-Don, Russia}{}{}
+
+\subsection{Selected courses taken}
+
+\begin{itemize}
+  \item Quantum Computing (Southern Federal University, 2016)
+  \item Optimizing Compilers Development (Southern Federal University, 2016)
+  \item Cryptography (Vilnius University, 2016)
+  \item Insights into Academic Discourse (Vilnius University, 2016)
+  \item Certified Software Development with Dependent Types in Idris (Southern Federal University, 2014)
+  \item Machine Learning (Southern Federal University, 2015)
+  \item FPGA programming (Southern Federal University, 2015)
+  \item Functional Programming in Haskell (Southern Federal University, 2014)
+  \item Supercomputer Technologies (Southern Federal University, 2014)
+  \item Computer Organization (Southern Federal University, 2012)
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+% RESEARCH INTERESTS SECTION
+%-------------------------------------------------------------------------------
+
+\section{Research interests}
+
+\begin{itemize}
+  \item Functional programming
+  \item Theory of programming languages
+  \item Effectful programming
+  \item Software development with typed functional languages
+  \item Machine learning
+\end{itemize}
+
+\section{Master's thesis (work-in-progress)}
+
+\cvitem{Working title}{\emph{``Student's Big Brother''}}
+\cvitem{Supervisors}{Assistant Professor Artem Pelenitsyn}
+
+\cvitem{Description}{
+Distributed system to support study workflow in programming class.
+It's created to help teacher to uniformly distribute his/her attention
+between all students. System consists of client daemons, watching students
+activity and sending their source code to server (over HTTP), for storage,
+processing and displaying in teacher web-interface.
+Source code is available on \Colorhref{https://github.com/geo2a/students-big-brother}{GitHub}.
+}
+\cvitem{Technology stack}{Haskell (servant), PostgreSQL, Javascript (Ember.js), Git.}
+
+\section{Bachelor's thesis}
+
+\cvitem{Title}{\emph{Functional parser of lightweight Markdown markup language based on monad combining and monoidal source stream representation}}
+\cvitem{Supervisors}{Assistant Professor Artem Pelenitsyn}
+\cvitem{Description}{
+Parser-combinator library based on monad transformers and monoid-subclasses as a
+representation of input stream was developed. This library was used to build
+a lightweight tool for taking lecture notes: parsing Markdown with \LaTeX pieces
+and rendering to HTML. Source code of library and tool is available on
+\Colorhref{https://github.com/geo2a/markdown-monparsing}{GitHub}. A prototype of monadic parser-combinators library based on extensible effects
+was built. Sources also are available on \Colorhref{https://github.com/geo2a/ext-effects-parsers}{GitHub}.
+}
+
+%-------------------------------------------------------------------------------
+% TAKEN COURCES SECTION
+%-------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\cventry{2015--Present}{Software Engineer}{\textsc{Statzilla}}{Rostov-on-Don}{}{
+Taking part in projects connected with machine learning, statistics and digital
+signal processing. Development of web and desktop applications.
+\newline{}\newline{}
+Detailed activities:
+\begin{enumerate}
+\item Development of statistical analysis web-service (R, C++, JavaScropt, PHP).
+\item Organization of workflow of software development team:
+  \begin{itemize}
+    \item Version control (Git, Gitlab)
+    \item Continuous integration (Gitlab CI)
+  \end{itemize}
+\item Organization of deployment procedures.
+\item Development of computational back-end HTTP-service based on
+\Colorhref{https://www.opencpu.org/}{Opencpu}.
+\item Implementation of Windows desktop app for infant heart rate analysis based on digital
+signal processing methods (R, C\#).
+\item Solving various machine learning tasks: prediction of age of subscribers
+of cellular provider based on data about services they are using, categorizing
+crimes based on location on city map and some others.
+\end{enumerate}
+}
+
+%------------------------------------------------
+
+\cventry{Summer 2015}{Summer Intern}{\textsc{Statzilla}}{Rostov-on-Don}{}{}
+
+%------------------------------------------------
+
+\cventry{September--December 2015}{Teaching assistant}{\textsc{Southern Federal University}}{Rostov-on-Don}{}{
+Teaching ``Functional Programming in Haskell'' labs with occasional lecturing.
+}
+
+%------------------------------------------------
+
+\cventry{May--December 2014}{C\# Developer}{\textsc{Strob}}{Rostov-on-Don}{}{
+Taking part in development of distributed system for collecting and processing
+of water meter data. Development of SCADA-like .NET-application.
+}
+
+%-------------------------------------------------------------------------------
+% CONFERENCES, etc.
+%-------------------------------------------------------------------------------
+
+\section{Awards}
+
+\cvitem{December 2015}{First place in data analysis competition ``Me and the
+World in 2030'' organized by bank Centr-Invest}
+
+\cvitem{November 2015}{Third place in hackathon ``47 hours'' as a part of team
+Statzilla for web-based arcade game project}
+
+\cvitem{April 2015}{First place in students research competition "Week of Science 2015"
+of Southern Federal University
+with project ``Functional parser of lightweight Markdown markup language based on monad
+combining and monoidal source stream representation''}
+
+%-------------------------------------------------------------------------------
+% COMPUTER SKILLS SECTION
+%-------------------------------------------------------------------------------
+\section{Computer skills}
+
+  {\large \textbf{Programming languages}} \\
+    % \begin{subsection}
+      \emph{Strong knowledge}: Haskell, C\#, R, JavaScript, SQL \\
+      \emph{Some experience}: C, C++, Java, PHP, Bash, Assembly, Idris
+    % \end{subsection}
+
+  {\large \textbf{Markup Languages}} \\
+  HTML, CSS, \LaTeX, Markdown
+
+  {\large \textbf{Other}} \\
+  \emph{Virtualization}: VirtualBox, Vagrant, Docker \\
+  \emph{Operating Systems}: GNU/Linux (Ubuntu) administration,
+                            programming with Win32 API \\
+  \emph{Version control}: Git
+%-------------------------------------------------------------------------------
+\section{General skills}
+
+  {\large \textbf{Spoken languages}} \\
+    % \begin{subsection}
+      \emph{English}: C1 according to CEFR, IELST overall band score: 8.0 \\
+      \emph{Russian}: native
+    % \end{subsection}
+%-------------------------------------------------------------------------------
+% CULTURAL AND SOCIAL LIFE SECTION
+%-------------------------------------------------------------------------------
+\section{Cultural and social activities}
+
+\cventry{2012--2014}{Performer}{Southern Federal University}{Rostov-on-Don}{}{
+Various cultural activities, being part of creative team of Institute of Mechanics,
+Mathematics and Computer Science.
+\begin{itemize}
+  \item Playing on stage as a part of the performance troupe called ``The Fashion Drama''.
+  \item Helping freshmans to get into flow of cultural life of university.
+  \item Being a part of stage service team.
+\end{itemize}
+}
+
+\subsection{Awards}
+
+\cvitem{2013-2015}{Multiple prizes of region-wide creative festival ``Russian Students Spring'' for performances. As a part of performance troupe
+``The Fashion Drama''.
+}
+
+%----------------------------------------------------------------------------------------
+% INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+% \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvitem{Photography}{
+Mainly landscape and conceptual. Some photos are available on \href{https://www.flickr.com/photos/113494852@N02/}{Flickr} and \href{https://www.facebook.com/georgiyl/photos_all}{Facebook}
+}
+
+\cvitem{Literature}{
+  Albert Camus, John Fowles, Stanislaw Lem, Arkady and Boris Strugatsky
+}
+
+\cvitem{Sports}{Cycling, Swimming}
+
+\end{document}
