@@ -26,6 +26,10 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
+\usepackage [maxbibnames=5, style = gost-numeric] {biblatex}
+\defbibheading{bibliography}[\refname]{}
+\addbibresource {publications.bib}
+
 \moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
@@ -107,7 +111,7 @@
   \item Insights into Academic Discourse (Vilnius University, 2016)
   \item Certified Software Development with Dependent Types in Idris (Southern Federal University, 2014)
   \item Machine Learning (Southern Federal University, 2015)
-  \item FPGA programming (Southern Federal University, 2015)
+  \item FPGA programming (Computing and microprogramming) (Southern Federal University, 2015)
   \item Functional Programming in Haskell (Southern Federal University, 2014)
   \item Supercomputer Technologies (Southern Federal University, 2014)
   \item Computer Organization (Southern Federal University, 2012)
@@ -127,20 +131,21 @@
   \item Machine learning
 \end{itemize}
 
-\section{Master's thesis (work-in-progress)}
+\section{Master's thesis}
 
-\cvitem{Working title}{\emph{``Student's Big Brother''}}
+\cvitem{Working title}{\emph{Structuring effectful computation}}
 \cvitem{Supervisors}{Assistant Professor Artem Pelenitsyn}
 
 \cvitem{Description}{
-Distributed system to support study workflow in programming class.
-It's created to help teacher to uniformly distribute his/her attention
-between all students. System consists of client daemons, watching students
-activity and sending their source code to server (over HTTP), for storage,
-processing and displaying in teacher web-interface.
-Source code is available on \Colorhref{https://github.com/geo2a/students-big-brother}{GitHub}.
+The thesis explores the monadic and algebraic effects and handlers frameworks by solving
+the standard model problem: building a parser combinators library. The work include a comparison
+of these approaches in terms of expressiveness and, for some of them, performance, and makes
+observations about their applicability. The side-effect of the thesis is demonstration the
+usage of the typed functional programming language with an effect system at
+scale: develop a full-featured effect-structured web application with Haskell.
 }
-\cvitem{Technology stack}{Haskell (servant), PostgreSQL, Javascript (Ember.js), Git.}
+\cvitem{Keywords}{Haskell, Frank, computational effects, monads, algebraic effects,
+effects handlers, parsers}
 
 \section{Bachelor's thesis}
 
@@ -155,10 +160,15 @@ and rendering to HTML. Source code of library and tool is available on
 was built. Sources also are available on \Colorhref{https://github.com/geo2a/ext-effects-parsers}{GitHub}.
 }
 
-%-------------------------------------------------------------------------------
-% TAKEN COURCES SECTION
-%-------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+% ACADEMIC PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
 
+\section{Publications}
+
+\nocite{*}
+
+\printbibliography
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -166,27 +176,9 @@ was built. Sources also are available on \Colorhref{https://github.com/geo2a/ext
 
 \section{Experience}
 
-\cventry{2015--Present}{Software Engineer}{\textsc{Statzilla}}{Rostov-on-Don}{}{
+\cventry{August 2015--June 2017}{Software Engineer}{\textsc{Statzilla}}{Rostov-on-Don}{}{
 Taking part in projects connected with machine learning, statistics and digital
 signal processing. Development of web and desktop applications.
-\newline{}\newline{}
-Detailed activities:
-\begin{enumerate}
-\item Development of statistical analysis web-service (R, C++, JavaScropt, PHP).
-\item Organization of workflow of software development team:
-  \begin{itemize}
-    \item Version control (Git, Gitlab)
-    \item Continuous integration (Gitlab CI)
-  \end{itemize}
-\item Organization of deployment procedures.
-\item Development of computational back-end HTTP-service based on
-\Colorhref{https://www.opencpu.org/}{Opencpu}.
-\item Implementation of Windows desktop app for infant heart rate analysis based on digital
-signal processing methods (R, C\#).
-\item Solving various machine learning tasks: prediction of age of subscribers
-of cellular provider based on data about services they are using, categorizing
-crimes based on location on city map and some others.
-\end{enumerate}
 }
 
 %------------------------------------------------
@@ -213,12 +205,12 @@ of water meter data. Development of SCADA-like .NET-application.
 \section{Awards}
 
 \cvitem{December 2015}{First place in data analysis competition ``Me and the
-World in 2030'' organized by bank Centr-Invest}
+World in 2030'' organized by Centr-Invest bank}
 
 \cvitem{November 2015}{Third place in hackathon ``47 hours'' as a part of team
 Statzilla for web-based arcade game project}
 
-\cvitem{April 2015}{First place in students research competition "Week of Science 2015"
+\cvitem{April 2015}{First place in students research competition ``Week of Science 2015''
 of Southern Federal University
 with project ``Functional parser of lightweight Markdown markup language based on monad
 combining and monoidal source stream representation''}
@@ -231,7 +223,7 @@ combining and monoidal source stream representation''}
   {\large \textbf{Programming languages}} \\
     % \begin{subsection}
       \emph{Strong knowledge}: Haskell, C\#, R, JavaScript, SQL \\
-      \emph{Some experience}: C, C++, Java, PHP, Bash, Assembly, Idris
+      \emph{Some experience}: Idris, C, C++, Java, PHP, Bash, Assembly
     % \end{subsection}
 
   {\large \textbf{Markup Languages}} \\
