@@ -1,6 +1,6 @@
 *.sublime-workspace
 *.sublime-project
-*.pdf
+# *.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

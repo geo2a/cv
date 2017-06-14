@@ -1,9 +1,9 @@
-.PHONY: rus eng all clean
+.PHONY: all
 
-test: cv-test.pdf
+all: cv.pdf
 
-cv-test.pdf: main.tex
-	latexmk -pdf -xelatex -use-make main.tex
+cv.pdf: cv.tex
+	latexmk -pdf -xelatex -use-make cv.tex
 
 clean:
 	latexmk -CA
