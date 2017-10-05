@@ -26,7 +26,8 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
-\usepackage [maxbibnames=5, style = gost-numeric] {biblatex}
+
+\usepackage [maxbibnames=10, style = gost-numeric] {biblatex}
 \defbibheading{bibliography}[\refname]{}
 \addbibresource {publications.bib}
 
@@ -47,9 +48,9 @@
 
 % All information in this block is optional, comment out any lines you don't need
 \title{Curriculum Vitae}
-\address{44 Pushkinskaya st.}{344082 Rostov-on-Don, Russia}
-\mobile{+7(908) 506 9512}
-\email{georgiy.lukjanov@gmail.com}
+% \address{44 Pushkinskaya st.}{344082 Rostov-on-Don, Russia}
+% \mobile{+7(908) 506 9512}
+\email{g.lukyanov2@newcastle.ac.uk}
 \homepage{geo2a.github.io}{geo2a.github.io} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 % \extrainfo{additional information}
 % \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
@@ -97,25 +98,11 @@
 
 \section{Education}
 
-\cventry{2015--2017 (in-progress)}{M. Sc. in Computer Science}{Southern Federal University, I. I. Vorovich Institute of Mathematics, Mechanics and Computer Science}{Rostov-on-Don, Russia}{}{}  % Arguments not required can be left empty
+\cventry{2017--Present}{PhD in EEE}{Newcastle University}{UK}{}{}
+\cventry{2015--2017}{M. Sc. in Computer Science}{Southern Federal University, I. I. Vorovich Institute of Mathematics, Mechanics and Computer Science}{Rostov-on-Don, Russia}{}{}  % Arguments not required can be left empty
 \cventry{February --\\June 2016}{Eramus+ exchange program}{Vilnius University, Faculty of Mathematics and Informatics, Faculty of Philology}{Vilnius, Lithuania}{}{}
 
 \cventry{2011--2015}{B. Sc. in Applied Mathematics and Computer Science}{Southern Federal University, I. I. Vorovich Institute of Mathematics, Mechanics and Computer Science}{Rostov-on-Don, Russia}{}{}
-
-\subsection{Selected courses taken}
-
-\begin{itemize}
-  \item Quantum Computing (Southern Federal University, 2016)
-  \item Optimizing Compilers Development (Southern Federal University, 2016)
-  \item Cryptography (Vilnius University, 2016)
-  \item Insights into Academic Discourse (Vilnius University, 2016)
-  \item Certified Software Development with Dependent Types in Idris (Southern Federal University, 2014)
-  \item Machine Learning (Southern Federal University, 2015)
-  \item FPGA programming (Computing and microprogramming) (Southern Federal University, 2015)
-  \item Functional Programming in Haskell (Southern Federal University, 2014)
-  \item Supercomputer Technologies (Southern Federal University, 2014)
-  \item Computer Organization (Southern Federal University, 2012)
-\end{itemize}
 
 %-------------------------------------------------------------------------------
 % RESEARCH INTERESTS SECTION
@@ -124,12 +111,24 @@
 \section{Research interests}
 
 \begin{itemize}
+  \item Programming languages
   \item Functional programming
-  \item Theory of programming languages
+  \item Formal methods
   \item Effectful programming
   \item Software development with typed functional languages
   \item Machine learning
 \end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+% ACADEMIC PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Publications}
+
+\nocite{*}
+
+\printbibliography
 
 \section{Master's thesis}
 
@@ -160,15 +159,21 @@ and rendering to HTML. Source code of library and tool is available on
 was built. Sources also are available on \Colorhref{https://github.com/geo2a/ext-effects-parsers}{GitHub}.
 }
 
-%----------------------------------------------------------------------------------------
-% ACADEMIC PUBLICATIONS SECTION
-%----------------------------------------------------------------------------------------
+\subsection{Selected courses taken}
 
-\section{Publications}
+\begin{itemize}
+  \item Quantum Computing (Southern Federal University, 2016)
+  \item Optimizing Compilers Development (Southern Federal University, 2016)
+  \item Cryptography (Vilnius University, 2016)
+  \item Insights into Academic Discourse (Vilnius University, 2016)
+  \item Certified Software Development with Dependent Types in Idris (Southern Federal University, 2014)
+  \item Machine Learning (Southern Federal University, 2015)
+  \item FPGA programming (Computing and microprogramming) (Southern Federal University, 2015)
+  \item Functional Programming in Haskell (Southern Federal University, 2014)
+  \item Supercomputer Technologies (Southern Federal University, 2014)
+  \item Computer Organization (Southern Federal University, 2012)
+\end{itemize}
 
-\nocite{*}
-
-\printbibliography
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
