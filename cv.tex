@@ -27,7 +27,7 @@
 \documentclass[12pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
 
-\usepackage [maxbibnames=10, style = gost-numeric] {biblatex}
+\usepackage [maxbibnames=10, sorting=none, style = gost-numeric] {biblatex}
 \defbibheading{bibliography}[\refname]{}
 \addbibresource {publications.bib}
 
@@ -69,19 +69,20 @@
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
-\vspace{-3em}
+\vspace{-17mm}
 \section{Education}
 
-\cventry{Since 2017}{PhD in EEE}{Newcastle University}{UK}{}{}
-\cventry{2015--2017}{M. Sc. in Computer Science}{Southern Federal University}{Russia}{}{}  % Arguments not required can be left empty
+\cventry{Since 2017}{PhD Student in EEE}{Newcastle University}{UK}{}{}
+\cventry{2015--2017}{M.Sc. in Computer Science}{Southern Federal University}{Russia}{}{}  % Arguments not required can be left empty
 % \cventry{February --\\June 2016}{Eramus+ exchange program}{Vilnius University, Faculty of Mathematics and Informatics, Faculty of Philology}{Vilnius, Lithuania}{}{}
 
-\cventry{2011--2015}{B. Sc. in Applied Mathematics and Computer Science}{Southern Federal University}{Russia}{}{}
+\cventry{2011--2015}{B.Sc. in Applied Mathematics}{Southern Federal University}{Russia}{}{}
 
 %-------------------------------------------------------------------------------
 % RESEARCH INTERESTS SECTION
 %-------------------------------------------------------------------------------
 
+\vspace{-5mm}
 \section{Research interests}
 
 Formal methods, programming languages theory, functional programming, effectful programming.
@@ -89,24 +90,28 @@ Formal methods, programming languages theory, functional programming, effectful 
 % ACADEMIC PUBLICATIONS SECTION
 %----------------------------------------------------------------------------------------
 
+\vspace{-3mm}
 \section{Publications}
 
 \nocite{*}
-
 \printbibliography
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
+\vspace{-7mm}
 \section{Experience}
 
+\cventry{October 2017--\\Present}{Teaching Assiatant}{\textsc{Newcastle University}}{}{}{
+Practical sessions on C programming.
+}
+
 \cventry{June 2015--\\June 2017}{Software Engineer}{\textsc{Statzilla}}{Rostov-on-Don, Russia}{}{
-Taking part in projects connected with machine learning, statistics and digital
-signal processing. Development of web and desktop applications.
+Machine learning, statistics and digital signal processing. Web programming.
 }
 %----------------------------------------------
-\cventry{Sep 2015--\\Dec 2015}{Teaching assistant}{\textsc{Southern Federal University}}{Rostov-on-Don, Russia}{}{
+\cventry{Sep 2015--\\Dec 2015}{Teaching Assistant}{\textsc{Southern Federal University}}{Rostov-on-Don, Russia}{}{
 Teaching ``Functional Programming in Haskell'' labs with occasional lecturing.
 }
 %-------------------------------------------------------------------------------
