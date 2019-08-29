@@ -27,14 +27,23 @@
 \documentclass[12pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
 
-\usepackage [maxbibnames=10, sorting=none, style = gost-numeric] {biblatex}
+\usepackage [maxbibnames=10, sorting=none, style = numeric] {biblatex}
 \defbibheading{bibliography}[\refname]{}
 \addbibresource {publications.bib}
 
 \moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \usepackage{paratype}
-\usepackage[scale=0.85]{geometry} % Reduce document margins
+% \usepackage[scale=0.9]{geometry} % Reduce document margins
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=15mm,
+ right=15mm,
+ top=10mm,
+ bottom=10mm
+ }
 \setlength{\hintscolumnwidth}{2.6cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
