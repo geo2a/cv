@@ -24,10 +24,29 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[12pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[12pt,a4paper,sans,colorlinks,urlcolor=cyan,linkcolor=blue]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
 % Underline my name in publications
 \newcommand{\myname}[1]{\underline{Georgy Lukyanov}}
+
+% https://tex.stackexchange.com/questions/310612/moderncv-date-year-on-top-month
+\usepackage{datetime}
+\def\cvdate[#1.#2]{\makebox[25mm]{\footnotesize%
+    \parbox[t]{10mm}{\centering{\shortmonthname[#1]\par%
+        {#2}}}}%
+  }
+\def\cvyears[#1-#2]{\makebox[25mm]{\footnotesize%
+    \parbox[t]{12mm}{\centering{{#1}}}%
+    \makebox[5mm]{{--}}%
+    \parbox[t]{12mm}{\centering{{#2}}}%
+}}
+\def\cvdates[#1.#2-#3.#4]{\makebox[25mm]{\footnotesize%
+    \parbox[t]{10mm}{\centering{\shortmonthname[#1]\par%
+        {#2}}}%
+    \makebox[5mm]{\raisebox{-0.5ex}{{--}}}%
+    \parbox[t]{10mm}{\centering{\shortmonthname[#3]\par%
+        {#4}}}
+}}
 
 \usepackage [maxbibnames=10, sorting=none, style = numeric] {biblatex}
 \defbibheading{bibliography}[\refname]{}
@@ -45,7 +64,8 @@
  right=15mm,
  top=10mm,
  bottom=10mm
- }
+}
+
 \setlength{\hintscolumnwidth}{2.6cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
@@ -65,7 +85,7 @@
 % \quote{"A witty and playful quotation" - John Smith}
 
 % Colored hyperlinks
-\newcommand\Colorhref[3][cyan]{\href{#2}{\small\color{#1}#3}}
+% \newcommand\Colorhref[3][cyan]{\href{#2}{\small\color{#1}#3}}
 
 %----------------------------------------------------------------------------------------
 
@@ -79,19 +99,9 @@
 % RESEARCH INTERESTS SECTION
 %-------------------------------------------------------------------------------
 
-\vspace{-18mm}
-\section{Research interests}
+\vspace{-10mm}
 
-\vspace{-2mm}
-Formal methods, programming languages, functional programming. % , effectful programming.
-
-\vspace{-3mm}
-\section{Positioning and career goals}
-\vspace{-2mm}
-
-I am a PhD student at Newcastle University working on functional programming and computer engineering. I strive to participate in research projects that would both advance the theory and make impact in applications. The primary subject of my PhD is the development of a symbolic execution based verification framework for spacecraft control programs. I research how functional programming techniques may help to structure the implementation of such a framework. 
-
-\setlength\parindent{24pt} After completing my PhD, I see myself as a part of either an academic team with strong industry collaborations or an industrial research-oriented R\&D team.
+I am a final stage PhD student at Newcastle University working on functional programming and computer engineering. The primary subject of my PhD is the development of a symbolic execution-based verification framework for a specialised instruction-set architecture for spacecraft subsystems. I research how functional programming techniques can help to structure the implementation of such a framework. 
 
 \setlength\parindent{0pt} 
 %----------------------------------------------------------------------------------------
@@ -112,24 +122,26 @@ I am a PhD student at Newcastle University working on functional programming and
 \section{Research Visits}
 
 \vspace{-2mm}
-\cventry{April 2019}{TU Wien and RUAG Space Austria}{}{}{}{I visited for two weeks to present updates on the verification framework for the REDFIN processor and work on new verification examples.}
+\cventry{\cvdates[02.2020-04.2020]}{Vrije Universiteit Brussel}{}{}{}{I worked with Dominique Devriese and Steven Keuchel on \href{https://github.com/skeuchel/katamaran}{Katamaran} --- a Coq-embedded subset of the \href{https://www.cl.cam.ac.uk/~pes20/sail}{SAIL} instruction-set architecture specification language. My contributions were a generic separation logic interface and a disjoint-heap model for it, complete with a soundness proof with respect to SAIL's operational semantics. }
 
-\cventry{July 2018}{Cambridge University Computer Laboratory}{}{}{}{I spent a week there to meet researchers from Programming, Logic, and Semantics and Computer Architecture groups and get a closer look at the \href{https://www.cl.cam.ac.uk/~pes20/sail}{SAIL} language. I gave a presentation at the department seminar.
+\cventry{\cvdate[04.2019]}{TU Wien and RUAG Space Austria}{}{}{}{I visited for two weeks to present updates on the verification framework for the REDFIN processor and work on new verification examples.}
+
+\cventry{\cvdate[07.2018]}{Cambridge University Computer Laboratory}{}{}{}{I spent a week there to meet researchers from Programming, Logic, and Semantics and Computer Architecture groups and get a closer look at the \href{https://www.cl.cam.ac.uk/~pes20/sail}{SAIL} language. I gave a presentation at the department seminar.
 }
 
 \vspace{-5mm}
 \section{Work Experience}
 
 \vspace{-2mm}
-\cventry{Since 2017}{Teaching Assistant}{\textsc{Newcastle University}}{}{}{
+\cventry{\cvdates[10.2017-08.2020]}{Teaching Assistant}{\textsc{Newcastle University}}{}{}{
 C programming; Computer Systems and Microprocessors; Real Time and Embedded Systems
 }
 
-\cventry{June 2015--\\June 2017}{Software Engineer}{\textsc{Statzilla}}{Rostov-on-Don, Russia}{}{
+\cventry{\cvdates[06.2015-06.2017]}{Software Engineer}{\textsc{Statzilla}}{Rostov-on-Don, Russia}{}{
 Machine learning, statistics and digital signal processing. Web programming.
 }
 %----------------------------------------------
-\cventry{Sep 2015--\\Dec 2015}{Teaching Assistant}{\textsc{Southern Federal University}}{Rostov-on-Don, Russia}{}{
+\cventry{\cvdates[09.2015-12.2015]}{Teaching Assistant}{\textsc{Southern Federal University}}{Rostov-on-Don, Russia}{}{
 Teaching ``Functional Programming in Haskell'' labs with occasional lecturing.
 }
 %----------------------------------------------------------------------------------------
@@ -138,11 +150,11 @@ Teaching ``Functional Programming in Haskell'' labs with occasional lecturing.
 \vspace{-5mm}
 \section{Education}
 
-\cventry{Since 2017}{PhD Student in Computer Engineering}{Newcastle University}{UK}{}{}
-\cventry{2015--2017}{M.Sc. in Computer Science (with distinction)}{Southern Federal University}{Russia}{}{}  % Arguments not required can be left empty
+\cventry{\cvyears[2017-Present]}{PhD Student in Computer Engineering}{Newcastle University}{UK}{}{}
+\cventry{\cvyears[2015-2017]}{M.Sc. in Computer Science (with distinction)}{Southern Federal University}{Russia}{}{}  % Arguments not required can be left empty
 % \cventry{February --\\June 2016}{Eramus+ exchange program}{Vilnius University, Faculty of Mathematics and Informatics, Faculty of Philology}{Vilnius, Lithuania}{}{}
 
-\cventry{2011--2015}{B.Sc. in Applied Mathematics}{Southern Federal University}{Russia}{}{}
+\cventry{\cvyears[2011-2015]}{B.Sc. in Applied Mathematics}{Southern Federal University}{Russia}{}{}
 %-------------------------------------------------------------------------------
 % \vspace{-5mm}
 % \section{Qualifications}
